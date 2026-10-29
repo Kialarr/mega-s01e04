@@ -1,11 +1,21 @@
 ---
 plan: morning-digest
-status: ready
+status: completed
 owner: rook
 opened: 2026-10-29
 ---
 
 # Morning digest
+
+## Issues
+
+- [#1 — Run log reader](https://github.com/Kialarr/mega-s01e04/issues/1)
+- [#2 — Digest page](https://github.com/Kialarr/mega-s01e04/issues/2)
+- [#3 — Digest JSON](https://github.com/Kialarr/mega-s01e04/issues/3)
+- [#4 — Board links](https://github.com/Kialarr/mega-s01e04/issues/4)
+- [#5 — Digest route tests](https://github.com/Kialarr/mega-s01e04/issues/5)
+- [#6 — Public preview for review](https://github.com/Kialarr/mega-s01e04/issues/6)
+- [#7 — Remove preview marker after review](https://github.com/Kialarr/mega-s01e04/issues/7)
 
 The night's run log is a JSONL file nobody reads. By breakfast someone has to know what ran,
 what retried, what failed, and whose it was, without opening `runs/`. rig already serves the
