@@ -28,7 +28,8 @@ const expected: NightDigest = {
 
 // Read the first cell of each data row, ignoring presentation wrappers.
 function pageJobs(html: string): string[] {
-  return [...html.matchAll(/<tr\b[^>]*>\s*<td\b[^>]*>([\s\S]*?)<\/td>/gi)]
+  const body = html.match(/<tbody\b[^>]*>([\s\S]*?)<\/tbody>/i)?.[1] ?? '';
+  return [...body.matchAll(/<tr\b[^>]*>\s*<t[dh]\b[^>]*>([\s\S]*?)<\/t[dh]>/gi)]
     .map((match) => match[1].replace(/<[^>]*>/g, '').trim());
 }
 
