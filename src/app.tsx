@@ -10,10 +10,10 @@ export function createApp(config: RigConfig = loadConfig()) {
 
   app.get('/health', (c) => c.json({ ok: true, lane: lane().id }));
 
-  app.get('/', (c) =>
+  app.get('/', async (c) =>
     c.html(
       <Layout title="status" lane={lane()}>
-        <StatusBoard status={readStatus(config)} />
+        <StatusBoard status={await readStatus(config)} />
       </Layout>,
     ),
   );
